@@ -5,11 +5,11 @@ class Book:
         self.author = author
         self._is_checked_out=False
     def return_book(self):
-        if not self._is_checked_out:
-            self._is_checked_out = True
+        if self._is_checked_out:
+            self._is_checked_out = False
 
     def checkout_book(self):
-        if self._is_checked_out:
+        if not self._is_checked_out:
             self._is_checked_out = True
 class Library:
     def __init__(self):
